@@ -15,6 +15,17 @@
     <button type="submit" class="btn btn-primary">Search</button>
 </EditForm>
 
+@if (favoriteCities.Count > 0)
+{
+    <h5 class="mt-3">Favorite Cities</h5>
+    @foreach (var city in favoriteCities)
+    {
+        <button class="btn btn-outline-secondary me-2 mb-2" @onclick="async () => await LoadFavorite(city)">
+            @city
+        </button>
+    }
+}
+
 @if (isLoading)
 {
     <p>Loading...</p>
@@ -70,6 +81,8 @@
     private string errorMessage = "";
     private bool chartNeedsRender = false;
 
+    private List<string> favoriteCities = new();
+
     private async Task OnSearch()
     {
         isLoading = true;
@@ -86,7 +99,13 @@
             }
             else
             {
-                chartNeedsRender = true; // trigger chart render
+                chartNeedsRender = true;
+
+                // Save city to favorites if not already saved
+                if (!favoriteCities.Contains(searchModel.City, StringComparer.OrdinalIgnoreCase))
+                {
+                    favoriteCities.Add(searchModel.City);
+                }
             }
         }
         catch (Exception ex)
@@ -99,6 +118,12 @@
         }
     }
 
+    private async Task LoadFavorite(string city)
+    {
+        searchModel.City = city;
+        await OnSearch();
+    }
+
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
         if (chartNeedsRender && aqData?.Data.Forecast?.Daily?.PM25?.Count > 0)
@@ -108,7 +133,7 @@
 
             await JS.InvokeVoidAsync("renderLineChart", "pm25Chart", labels, values, "PM2.5");
 
-            chartNeedsRender = false; // prevent unnecessary re-render
+            chartNeedsRender = false;
         }
     }
 
@@ -131,7 +156,7 @@
         <= 300 => "Very unhealthy",
         _ => "Hazardous"
     };
-    
 }
+
 
 

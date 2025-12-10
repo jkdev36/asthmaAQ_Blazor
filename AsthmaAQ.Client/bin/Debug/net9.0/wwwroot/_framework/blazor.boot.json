@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "AsthmaAQ.Client",
   "resources": {
-    "hash": "sha256-IVB5ridxF2InGRLHvGwlkl8H5VFzaFhYB2jO8troCIk=",
+    "hash": "sha256-q6aR1FLFruhghCVGD9EPs3Q28PXVWF2tOAFksfK180s=",
     "fingerprinting": {
       "Blazorise.2b277jo5zr.wasm": "Blazorise.wasm",
       "Blazorise.Charts.0smkjc7063.wasm": "Blazorise.Charts.wasm",
@@ -205,8 +205,8 @@
       "icudt_CJK.tjcz0u77k5.dat": "icudt_CJK.dat",
       "icudt_EFIGS.tptq2av103.dat": "icudt_EFIGS.dat",
       "icudt_no_CJK.lfu7j35m59.dat": "icudt_no_CJK.dat",
-      "AsthmaAQ.Client.zfra8meo1a.wasm": "AsthmaAQ.Client.wasm",
-      "AsthmaAQ.Client.mhlqu10ezy.pdb": "AsthmaAQ.Client.pdb"
+      "AsthmaAQ.Client.eccl03xict.wasm": "AsthmaAQ.Client.wasm",
+      "AsthmaAQ.Client.qip1mjpyj2.pdb": "AsthmaAQ.Client.pdb"
     },
     "jsModuleNative": {
       "dotnet.native.9ih887ebfz.js": "sha256-oS7IRiQoVt9ThQ7Y2UM3XoeY0JqPD02cg9IvRdufn2w="
@@ -420,10 +420,10 @@
       "WindowsBase.vy2l5u79y6.wasm": "sha256-ufB9Mo5joMyUs3DzXWWBFFIZNEVrt6h9N5stYB6Oln4=",
       "mscorlib.xd6mv31d55.wasm": "sha256-1YSLR2eZt3ceALFV//vZUF2AloxVil3VlrW1zZYPSEI=",
       "netstandard.kaml52uspo.wasm": "sha256-HLEwBpLfzKw2/zGSVzHzFJxznCkt/WIjahrziiMrOpA=",
-      "AsthmaAQ.Client.zfra8meo1a.wasm": "sha256-b6kgRxFgMS11VkR4bBnMAa+PJszA9MwejbtkhZ/V2QQ="
+      "AsthmaAQ.Client.eccl03xict.wasm": "sha256-QlKv4dMKWguG4uWuc5YTyzZCPRcoT6mhndZDhZ12NGM="
     },
     "pdb": {
-      "AsthmaAQ.Client.mhlqu10ezy.pdb": "sha256-tg7fawoTlfelG41MC85mGjjtP5CV28zqUtH9Ul3MOu4="
+      "AsthmaAQ.Client.qip1mjpyj2.pdb": "sha256-ckl3nFXgWkM6RnfousBDc8/4QPF/clVqTbjc6zHYOV0="
     }
   },
   "cacheBootResources": true,
