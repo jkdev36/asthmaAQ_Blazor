@@ -40,10 +40,19 @@
 {
     <div class="mt-3">
         <h4>@aqData.Data.City.Name</h4>
-        <p>
-            AQI: <span style="color:@GetAqiColor(aqData.Data.AQI)">@aqData.Data.AQI</span> 
-            (@GetHealthAdvice(aqData.Data.AQI))
-        </p>
+
+        <div style="
+            background:@GetAqiColor(aqData.Data.AQI);
+            color:white;
+            padding:15px;
+            border-radius:10px;
+            width: fit-content;
+            font-size:1.3rem;
+            font-weight:bold;
+            margin-top:10px;
+        ">
+            AQI: @aqData.Data.AQI – @GetHealthAdvice(aqData.Data.AQI)
+        </div>
 
         <h5>Pollutants</h5>
         <ul>

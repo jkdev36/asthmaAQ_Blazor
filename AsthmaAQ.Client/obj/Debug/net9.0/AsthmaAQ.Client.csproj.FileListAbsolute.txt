@@ -1135,10 +1135,10 @@ G:\aq\asthmaAQ_Blazor\AsthmaAQ.Client\obj\Debug\net9.0\compressed\w61c4afktm-0sm
 G:\aq\asthmaAQ_Blazor\AsthmaAQ.Client\obj\Debug\net9.0\compressed\dbglwwm1gg-5q2r77toij.gz
 G:\aq\asthmaAQ_Blazor\AsthmaAQ.Client\obj\Debug\net9.0\compressed\4c638ei0gn-s11rboxncj.gz
 G:\aq\asthmaAQ_Blazor\AsthmaAQ.Client\obj\Debug\net9.0\compressed\86pvon7wdp-9dj44ev424.gz
-G:\aq\asthmaAQ_Blazor\AsthmaAQ.Client\bin\Debug\net9.0\wwwroot\_framework\AsthmaAQ.Client.9qzq0y09i5.wasm
-G:\aq\asthmaAQ_Blazor\AsthmaAQ.Client\bin\Debug\net9.0\wwwroot\_framework\AsthmaAQ.Client.4c11rywnki.pdb
-G:\aq\asthmaAQ_Blazor\AsthmaAQ.Client\bin\Debug\net9.0\wwwroot\_framework\AsthmaAQ.Client.9qzq0y09i5.wasm.gz
-G:\aq\asthmaAQ_Blazor\AsthmaAQ.Client\bin\Debug\net9.0\wwwroot\_framework\AsthmaAQ.Client.4c11rywnki.pdb.gz
-G:\aq\asthmaAQ_Blazor\AsthmaAQ.Client\obj\Debug\net9.0\compressed\7bhnou8mgn-9qzq0y09i5.gz
-G:\aq\asthmaAQ_Blazor\AsthmaAQ.Client\obj\Debug\net9.0\compressed\e3edthy9q9-4c11rywnki.gz
-G:\aq\asthmaAQ_Blazor\AsthmaAQ.Client\obj\Debug\net9.0\compressed\ficja5uo1w-vox5jh172k.gz
+G:\aq\asthmaAQ_Blazor\AsthmaAQ.Client\bin\Debug\net9.0\wwwroot\_framework\AsthmaAQ.Client.3sd872npyq.wasm
+G:\aq\asthmaAQ_Blazor\AsthmaAQ.Client\bin\Debug\net9.0\wwwroot\_framework\AsthmaAQ.Client.axcuu7vn2t.pdb
+G:\aq\asthmaAQ_Blazor\AsthmaAQ.Client\bin\Debug\net9.0\wwwroot\_framework\AsthmaAQ.Client.3sd872npyq.wasm.gz
+G:\aq\asthmaAQ_Blazor\AsthmaAQ.Client\bin\Debug\net9.0\wwwroot\_framework\AsthmaAQ.Client.axcuu7vn2t.pdb.gz
+G:\aq\asthmaAQ_Blazor\AsthmaAQ.Client\obj\Debug\net9.0\compressed\7bhnou8mgn-3sd872npyq.gz
+G:\aq\asthmaAQ_Blazor\AsthmaAQ.Client\obj\Debug\net9.0\compressed\e3edthy9q9-axcuu7vn2t.gz
+G:\aq\asthmaAQ_Blazor\AsthmaAQ.Client\obj\Debug\net9.0\compressed\ficja5uo1w-aifvliwxcc.gz

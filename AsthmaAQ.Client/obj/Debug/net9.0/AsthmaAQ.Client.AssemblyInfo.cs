@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AsthmaAQ.Client")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+625cb11fe752367328a029f445b18009af494388")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b69d13295f37f0e0323bd5dae7ad7362e516c36c")]
 [assembly: System.Reflection.AssemblyProductAttribute("AsthmaAQ.Client")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AsthmaAQ.Client")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
