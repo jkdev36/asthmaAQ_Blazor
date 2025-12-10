@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ZmitIDzvqoM=",
+  "dgSpecHash": "A5mYGGAJplc=",
   "success": true,
-  "projectFilePath": "G:\\aq\\AsthmaAQ.Client\\AsthmaAQ.Client.csproj",
+  "projectFilePath": "G:\\aq\\asthmaAQ_Blazor\\AsthmaAQ.Client\\AsthmaAQ.Client.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\jackk\\.nuget\\packages\\microsoft.aspnetcore.authorization\\9.0.9\\microsoft.aspnetcore.authorization.9.0.9.nupkg.sha512",
     "C:\\Users\\jackk\\.nuget\\packages\\microsoft.aspnetcore.components\\9.0.9\\microsoft.aspnetcore.components.9.0.9.nupkg.sha512",

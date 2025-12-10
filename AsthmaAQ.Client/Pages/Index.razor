@@ -1,0 +1,109 @@
+@page "/"
+@using AsthmaAQ.Client.Models
+@using AsthmaAQ.Client.Services
+@inject AirQualityService AQService
+@inject IJSRuntime JS
+
+<h3>Air Quality Checker</h3>
+
+<EditForm Model="@searchModel" OnValidSubmit="OnSearch">
+    <DataAnnotationsValidator />
+    <div>
+        <InputText @bind-Value="searchModel.City" placeholder="Enter city..." />
+        <ValidationMessage For="@(() => searchModel.City)" />
+    </div>
+    <button type="submit">Search</button>
+</EditForm>
+
+@if (isLoading)
+{
+    <p>Loading...</p>
+}
+
+@if (!string.IsNullOrEmpty(errorMessage))
+{
+    <p style="color:red">@errorMessage</p>
+}
+
+@if (aqData != null)
+{
+    <h4>@aqData.Data.City.Name</h4>
+    <p>
+        AQI: <span style="color:@GetAqiColor(aqData.Data.AQI)">@aqData.Data.AQI</span> 
+        (@GetHealthAdvice(aqData.Data.AQI))
+    </p>
+
+    <h5>Pollutants</h5>
+    <ul>
+        @foreach (var item in aqData.Data.Iaqi)
+        {
+            <li>@item.Key.ToUpper(): @item.Value.Value</li>
+        }
+    </ul>
+
+    <h5>PM2.5 Trend</h5>
+    <ul>
+        @foreach (var day in aqData.Data.Forecast.Daily.PM25)
+        {
+            <li>@day.Day: @day.Avg</li>
+        }
+    </ul>
+}
+
+@code {
+    private class SearchModel
+    {
+        [System.ComponentModel.DataAnnotations.Required]
+        public string City { get; set; } = "";
+    }
+
+    private SearchModel searchModel = new();
+    private AirQualityResponse? aqData;
+    private bool isLoading = false;
+    private string errorMessage = "";
+
+    private async Task OnSearch()
+    {
+        isLoading = true;
+        errorMessage = "";
+        aqData = null;
+
+        try
+        {
+            aqData = await AQService.GetAirQualityByCityAsync(searchModel.City);
+            if (aqData == null || aqData.Status != "ok")
+            {
+                errorMessage = "Could not fetch data for this city.";
+            }
+        }
+        catch (Exception ex)
+        {
+            errorMessage = $"Error: {ex.Message}";
+        }
+        finally
+        {
+            isLoading = false;
+        }
+    }
+
+    private string GetAqiColor(int aqi) => aqi switch
+    {
+        <= 50 => "green",
+        <= 100 => "yellow",
+        <= 150 => "orange",
+        <= 200 => "red",
+        <= 300 => "purple",
+        _ => "maroon"
+    };
+
+    private string GetHealthAdvice(int aqi) => aqi switch
+    {
+        <= 50 => "Good for sensitive individuals",
+        <= 100 => "Moderate, some respiratory issues possible",
+        <= 150 => "Unhealthy for sensitive groups",
+        <= 200 => "Unhealthy",
+        <= 300 => "Very unhealthy",
+        _ => "Hazardous"
+    };
+}
+

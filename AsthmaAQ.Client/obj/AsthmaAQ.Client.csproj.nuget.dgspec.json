@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "G:\\aq\\AsthmaAQ.Client\\AsthmaAQ.Client.csproj": {}
+    "G:\\aq\\asthmaAQ_Blazor\\AsthmaAQ.Client\\AsthmaAQ.Client.csproj": {}
   },
   "projects": {
-    "G:\\aq\\AsthmaAQ.Client\\AsthmaAQ.Client.csproj": {
+    "G:\\aq\\asthmaAQ_Blazor\\AsthmaAQ.Client\\AsthmaAQ.Client.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "G:\\aq\\AsthmaAQ.Client\\AsthmaAQ.Client.csproj",
+        "projectUniqueName": "G:\\aq\\asthmaAQ_Blazor\\AsthmaAQ.Client\\AsthmaAQ.Client.csproj",
         "projectName": "AsthmaAQ.Client",
-        "projectPath": "G:\\aq\\AsthmaAQ.Client\\AsthmaAQ.Client.csproj",
+        "projectPath": "G:\\aq\\asthmaAQ_Blazor\\AsthmaAQ.Client\\AsthmaAQ.Client.csproj",
         "packagesPath": "C:\\Users\\jackk\\.nuget\\packages\\",
-        "outputPath": "G:\\aq\\AsthmaAQ.Client\\obj\\",
+        "outputPath": "G:\\aq\\asthmaAQ_Blazor\\AsthmaAQ.Client\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
