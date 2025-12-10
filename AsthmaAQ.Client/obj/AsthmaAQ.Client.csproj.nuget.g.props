@@ -17,6 +17,8 @@
     <Import Project="$(NuGetPackageRoot)microsoft.net.sdk.webassembly.pack\9.0.9\build\Microsoft.NET.Sdk.WebAssembly.Pack.props" Condition="Exists('$(NuGetPackageRoot)microsoft.net.sdk.webassembly.pack\9.0.9\build\Microsoft.NET.Sdk.WebAssembly.Pack.props')" />
     <Import Project="$(NuGetPackageRoot)microsoft.net.illink.tasks\9.0.9\build\Microsoft.NET.ILLink.Tasks.props" Condition="Exists('$(NuGetPackageRoot)microsoft.net.illink.tasks\9.0.9\build\Microsoft.NET.ILLink.Tasks.props')" />
     <Import Project="$(NuGetPackageRoot)microsoft.aspnetcore.components.webassembly\9.0.9\build\net9.0\Microsoft.AspNetCore.Components.WebAssembly.props" Condition="Exists('$(NuGetPackageRoot)microsoft.aspnetcore.components.webassembly\9.0.9\build\net9.0\Microsoft.AspNetCore.Components.WebAssembly.props')" />
+    <Import Project="$(NuGetPackageRoot)blazorise\1.8.8\buildTransitive\Blazorise.props" Condition="Exists('$(NuGetPackageRoot)blazorise\1.8.8\buildTransitive\Blazorise.props')" />
+    <Import Project="$(NuGetPackageRoot)blazorise.charts\1.8.8\buildTransitive\Blazorise.Charts.props" Condition="Exists('$(NuGetPackageRoot)blazorise.charts\1.8.8\buildTransitive\Blazorise.Charts.props')" />
   </ImportGroup>
   <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
     <PkgMicrosoft_NET_Sdk_WebAssembly_Pack Condition=" '$(PkgMicrosoft_NET_Sdk_WebAssembly_Pack)' == '' ">C:\Users\jackk\.nuget\packages\microsoft.net.sdk.webassembly.pack\9.0.9</PkgMicrosoft_NET_Sdk_WebAssembly_Pack>

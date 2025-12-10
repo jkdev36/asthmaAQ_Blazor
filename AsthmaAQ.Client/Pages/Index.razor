@@ -8,11 +8,11 @@
 
 <EditForm Model="@searchModel" OnValidSubmit="OnSearch">
     <DataAnnotationsValidator />
-    <div>
-        <InputText @bind-Value="searchModel.City" placeholder="Enter city..." />
+    <div class="mb-2">
+        <InputText @bind-Value="searchModel.City" placeholder="Enter city..." class="form-control" />
         <ValidationMessage For="@(() => searchModel.City)" />
     </div>
-    <button type="submit">Search</button>
+    <button type="submit" class="btn btn-primary">Search</button>
 </EditForm>
 
 @if (isLoading)
@@ -22,32 +22,39 @@
 
 @if (!string.IsNullOrEmpty(errorMessage))
 {
-    <p style="color:red">@errorMessage</p>
+    <p class="text-danger">@errorMessage</p>
 }
 
 @if (aqData != null)
 {
-    <h4>@aqData.Data.City.Name</h4>
-    <p>
-        AQI: <span style="color:@GetAqiColor(aqData.Data.AQI)">@aqData.Data.AQI</span> 
-        (@GetHealthAdvice(aqData.Data.AQI))
-    </p>
+    <div class="mt-3">
+        <h4>@aqData.Data.City.Name</h4>
+        <p>
+            AQI: <span style="color:@GetAqiColor(aqData.Data.AQI)">@aqData.Data.AQI</span> 
+            (@GetHealthAdvice(aqData.Data.AQI))
+        </p>
 
-    <h5>Pollutants</h5>
-    <ul>
-        @foreach (var item in aqData.Data.Iaqi)
-        {
-            <li>@item.Key.ToUpper(): @item.Value.Value</li>
-        }
-    </ul>
+        <h5>Pollutants</h5>
+        <ul>
+            @foreach (var item in aqData.Data.Iaqi)
+            {
+                <li>@item.Key.ToUpper(): @item.Value.Value</li>
+            }
+        </ul>
 
-    <h5>PM2.5 Trend</h5>
-    <ul>
-        @foreach (var day in aqData.Data.Forecast.Daily.PM25)
-        {
-            <li>@day.Day: @day.Avg</li>
-        }
-    </ul>
+        <h5>PM2.5 Trend</h5>
+        <ul>
+            @foreach (var day in aqData.Data.Forecast.Daily.PM25)
+            {
+                <li>@day.Day: @day.Avg</li>
+            }
+        </ul>
+
+        <h5>PM2.5 Trend Chart</h5>
+        <div style="width: 50%; height: 300px;">
+            <canvas id="pm25Chart"></canvas>
+        </div>
+    </div>
 }
 
 @code {
@@ -61,12 +68,14 @@
     private AirQualityResponse? aqData;
     private bool isLoading = false;
     private string errorMessage = "";
+    private bool chartNeedsRender = false;
 
     private async Task OnSearch()
     {
         isLoading = true;
         errorMessage = "";
         aqData = null;
+        chartNeedsRender = false;
 
         try
         {
@@ -74,6 +83,10 @@
             if (aqData == null || aqData.Status != "ok")
             {
                 errorMessage = "Could not fetch data for this city.";
+            }
+            else
+            {
+                chartNeedsRender = true; // trigger chart render
             }
         }
         catch (Exception ex)
@@ -83,6 +96,19 @@
         finally
         {
             isLoading = false;
+        }
+    }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (chartNeedsRender && aqData?.Data.Forecast?.Daily?.PM25?.Count > 0)
+        {
+            var labels = aqData.Data.Forecast.Daily.PM25.Select(d => d.Day).ToArray();
+            var values = aqData.Data.Forecast.Daily.PM25.Select(d => d.Avg).ToArray();
+
+            await JS.InvokeVoidAsync("renderLineChart", "pm25Chart", labels, values, "PM2.5");
+
+            chartNeedsRender = false; // prevent unnecessary re-render
         }
     }
 
@@ -105,5 +131,7 @@
         <= 300 => "Very unhealthy",
         _ => "Hazardous"
     };
+    
 }
+
 

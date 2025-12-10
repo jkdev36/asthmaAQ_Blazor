@@ -1,8 +1,12 @@
 {
   "mainAssemblyName": "AsthmaAQ.Client",
   "resources": {
-    "hash": "sha256-JiWvac050FbMWYYE2NkNgZjP2o0Z7VMwvZyRXAwmVO4=",
+    "hash": "sha256-IVB5ridxF2InGRLHvGwlkl8H5VFzaFhYB2jO8troCIk=",
     "fingerprinting": {
+      "Blazorise.2b277jo5zr.wasm": "Blazorise.wasm",
+      "Blazorise.Charts.0smkjc7063.wasm": "Blazorise.Charts.wasm",
+      "Blazorise.Licensing.5q2r77toij.wasm": "Blazorise.Licensing.wasm",
+      "Lambda2Js.s11rboxncj.wasm": "Lambda2Js.wasm",
       "Microsoft.AspNetCore.Authorization.z6jo10m0rd.wasm": "Microsoft.AspNetCore.Authorization.wasm",
       "Microsoft.AspNetCore.Components.65wbz7t8mt.wasm": "Microsoft.AspNetCore.Components.wasm",
       "Microsoft.AspNetCore.Components.Forms.ysqd97eroy.wasm": "Microsoft.AspNetCore.Components.Forms.wasm",
@@ -201,8 +205,8 @@
       "icudt_CJK.tjcz0u77k5.dat": "icudt_CJK.dat",
       "icudt_EFIGS.tptq2av103.dat": "icudt_EFIGS.dat",
       "icudt_no_CJK.lfu7j35m59.dat": "icudt_no_CJK.dat",
-      "AsthmaAQ.Client.xk8n8dcdgf.wasm": "AsthmaAQ.Client.wasm",
-      "AsthmaAQ.Client.c4ta061w2c.pdb": "AsthmaAQ.Client.pdb"
+      "AsthmaAQ.Client.zfra8meo1a.wasm": "AsthmaAQ.Client.wasm",
+      "AsthmaAQ.Client.mhlqu10ezy.pdb": "AsthmaAQ.Client.pdb"
     },
     "jsModuleNative": {
       "dotnet.native.9ih887ebfz.js": "sha256-oS7IRiQoVt9ThQ7Y2UM3XoeY0JqPD02cg9IvRdufn2w="
@@ -223,6 +227,10 @@
       "System.Private.CoreLib.uqnhzdwypx.wasm": "sha256-dmlLyil2xqdBc+0yMfmACcDeIGVefS4QHjRT/9mLdNs="
     },
     "assembly": {
+      "Blazorise.2b277jo5zr.wasm": "sha256-blqSQWk/I2NpnHmR+aTvDSWKI3jd6FmU3R2KANmnaGM=",
+      "Blazorise.Charts.0smkjc7063.wasm": "sha256-UMPAq78H+Q0w1XJSkLk6RO9iPPjQt2lhmUQg1NHI7J4=",
+      "Blazorise.Licensing.5q2r77toij.wasm": "sha256-cwZ2JjZXwvbaPnMO5TRbPjB5RCR6BTjFabvKtE/wTnQ=",
+      "Lambda2Js.s11rboxncj.wasm": "sha256-8KaSQQKzkSLxYo0ViQQKmvLoat2EMnYmC4Q2Ft6zU7M=",
       "Microsoft.AspNetCore.Authorization.z6jo10m0rd.wasm": "sha256-K3j153B4Qx57/sHT4gOICXyadidNa4qEUflLPz/OgCU=",
       "Microsoft.AspNetCore.Components.65wbz7t8mt.wasm": "sha256-esbkeXi/0iIJjs+MdmPU6nulNqIzqOw5a4hLgs2f6+U=",
       "Microsoft.AspNetCore.Components.Forms.ysqd97eroy.wasm": "sha256-8o1e7d2phwhchCrOcBV5r/UklI0sSixpCl8wQkEHNfE=",
@@ -412,10 +420,10 @@
       "WindowsBase.vy2l5u79y6.wasm": "sha256-ufB9Mo5joMyUs3DzXWWBFFIZNEVrt6h9N5stYB6Oln4=",
       "mscorlib.xd6mv31d55.wasm": "sha256-1YSLR2eZt3ceALFV//vZUF2AloxVil3VlrW1zZYPSEI=",
       "netstandard.kaml52uspo.wasm": "sha256-HLEwBpLfzKw2/zGSVzHzFJxznCkt/WIjahrziiMrOpA=",
-      "AsthmaAQ.Client.xk8n8dcdgf.wasm": "sha256-zxhepA/8DnKbpvvO/J93JvDzOyrDr4MyhUVbzFl0V3U="
+      "AsthmaAQ.Client.zfra8meo1a.wasm": "sha256-b6kgRxFgMS11VkR4bBnMAa+PJszA9MwejbtkhZ/V2QQ="
     },
     "pdb": {
-      "AsthmaAQ.Client.c4ta061w2c.pdb": "sha256-7Jmg0TeLa7UmEBydG6l1n4ZDRIk+guHJSAhJA09Ycns="
+      "AsthmaAQ.Client.mhlqu10ezy.pdb": "sha256-tg7fawoTlfelG41MC85mGjjtP5CV28zqUtH9Ul3MOu4="
     }
   },
   "cacheBootResources": true,
